@@ -1,0 +1,34 @@
+<html>
+<head>
+</head>
+<body>
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="background-color: yellow">
+
+  <!-- Does nothing -->
+  <path d="M10 10"/>
+
+  <!-- Points -->
+  <circle cx="10" cy="10" r="2" fill="red"/>
+
+</svg>
+
+<svg width="200" height="200" xmlns="http://www.w3.org/2000/svg" style="background-color: yellow">
+
+  <!--
+    H draws horizontal line from start to position N units left or right.
+    V draws vertical line from start to position N units up or down.
+
+    L draws line from current position to newly defined coord.
+
+
+  -->
+  <path d="M10 10 H 90 V 90 H 10 L 10 10"/>
+
+  <!--
+    Slightly shortened syntax
+  -->
+  <path d="M100 100 H 190 V 190 H 100 z"/>
+
+</body>
+</html>
