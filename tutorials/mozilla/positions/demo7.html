@@ -1,0 +1,49 @@
+<html>
+<head>
+<style>
+body {
+  background-color: blue;
+  margin:0px
+}
+</style>
+</head>
+<body>
+<!--
+  Create a user space of width 500 and height 100.
+
+  Manipulate the viewport to force scaling.
+  - The viewbox is half as large as the user space, causing the viewport content
+    to be zoomed.
+  - The anchor is the same for both spaces, so no shifting occurs.
+
+
+  
+-->
+<svg width="500" height="100" viewBox="0 0 250 50" style="outline: 5px solid #630;margin:0px">
+  <circle r="25" cx="25" cy="25" fill="#f00" />
+  <rect x="500" y="100" width="50" height="50" fill="#933" />
+</svg>
+
+<!--
+  Here the viewBox is twice as large as the viewPort, effectively zooming out. 
+-->
+<svg width="500" height="100" viewBox="0 0 1000 200" style="outline: 5px solid #630;margin:0px">
+  <circle r="25" cx="25" cy="25" fill="#f00" />
+  <rect x="500" y="100" width="50" height="50" fill="#933" />
+</svg>
+
+<!--
+  Here we change the aspect ratio of the viewBox.
+
+  Because preserveAspectRatio is by default on, the only thing that happens is that the circle gets   resized to having a   
+-->
+
+<svg width="500" height="100" viewBox="0 0 50 100" style="outline: 5px solid #630;margin:0px">
+  <circle r="25" cx="25" cy="25" fill="#f00" />
+</svg>
+
+<svg width="500" height="100" viewBox="0 0 50 100" style="outline: 5px solid #630;margin:0px" preserveAspectRatio="none">
+  <circle r="25" cx="25" cy="25" fill="#f00" />
+</svg>
+</body>
+</html>
